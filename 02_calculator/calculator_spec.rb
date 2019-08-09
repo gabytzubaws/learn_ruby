@@ -35,6 +35,27 @@
 
 require "calculator"
 
+
+
+
+describe "factorial" do
+  it "computes the factorial of 0" do
+    expect(factorial(0)).to eq(1)
+  end
+  it "computes the factorial of 1" do
+    expect(factorial(1)).to eq(1)
+  end
+  it "computes the factorial of 2" do
+    expect(factorial(2)).to eq(2)
+  end
+  it "computes the factorial of 5" do
+    expect(factorial(5)).to eq(120)
+  end
+  it "computes the factorial of 10" do
+    expect(factorial(10)).to eq(3628800)
+  end
+end
+
 describe "add" do
   it "adds 0 and 0" do
     expect(add(0,0)).to eq(0)
@@ -52,6 +73,9 @@ end
 describe "subtract" do
   it "subtracts numbers" do
     expect(subtract(10,4)).to eq(6)
+  end
+  it "subtracts big numbers" do
+    expect(subtract(243312,43312)). to eq(200000)
   end
 end
 
@@ -73,27 +97,12 @@ describe "sum" do
   end
 end
 
-# Extra Credit Test-Driving Bonus:
-# once the above tests pass,
-# write tests and code for the following:
-
-describe "#multiply" do
-
-  it "multiplies two numbers"
-
-  it "multiplies several numbers"
-  
+describe "power" do
+  it "raises one number to the power of another number" do
+    expect(power(2,4)).to eq(16)
+  end
 end
 
-describe "#power" do
-  it "raises one number to the power of another number"
-end
+
 
 # http://en.wikipedia.org/wiki/Factorial
-describe "#factorial" do
-  it "computes the factorial of 0"
-  it "computes the factorial of 1"
-  it "computes the factorial of 2"
-  it "computes the factorial of 5"
-  it "computes the factorial of 10"
-end
